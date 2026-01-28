@@ -13,14 +13,9 @@
     list-style: none;
 }
 
-/* html {
-    overflow: hidden;
-} */
-
 body {
     width: 100%;
     height: 100vh;
-    /* overflow: hidden; */
     background: radial-gradient(circle,rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
 }
 
@@ -114,17 +109,6 @@ section {
     text-shadow: 0 0 10px rgb(136, 98, 29);
 }
 
-.badge {
-    position: absolute;
-    top: 120px;
-    left: 12%;
-    background: var(--primary);
-    color: black;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-}
-
 .typewriter {
     font-weight: 600;
     font-size: 40px;
@@ -178,27 +162,6 @@ section {
     margin: 10px 0;
 }
 
-/* .social-links {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 3rem;
-    height: 3rem;
-    background-color: transparent;
-    border: 0.2rem solid black;
-    border-radius: 50%;
-    color: white;
-    margin: 5px 10px;
-    font-size: 1.5rem;
-    transition: 0.2s linear;
-}
-
-.social-links:hover {
-    color: black;
-    background-color: white;
-    scale: 1.3;
-    filter: drop-shadow(0 0 10px white);
-} */
 .footer {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 30px 12%;
@@ -231,8 +194,11 @@ section {
 }
 
 .content button {
+    display: inline-block;
     width: 40%;
     height: 6vh;
+    line-height: 6vh;
+    text-align: center;
     margin: 30px;
     background-color: orange;
     color: black;
@@ -251,6 +217,22 @@ section {
     font-weight: 700;
     box-shadow: 0 0 40px slategray;
 }
+
+.content {
+    animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 @media (max-width: 884px) {
 
@@ -377,6 +359,7 @@ section {
     overflow: hidden;
     max-width: 900px;
     margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Decorative corner */
@@ -426,6 +409,10 @@ section {
     grid-template-columns: repeat(3, 1fr); /* 3 per row on desktop */
     gap: 25px;
     width: 100%;
+}
+
+.gallery-card {
+    animation: fadeUp 0.8s ease forwards;
 }
 
 
@@ -519,3 +506,8 @@ section {
     background-color: transparent;
     border: 2px solid black;
 }
+
+.contact-form button:active {
+    transform: scale(0.97);
+}
+
