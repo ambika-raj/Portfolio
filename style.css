@@ -17,6 +17,7 @@ body {
     width: 100%;
     height: 100vh;
     background: radial-gradient(circle,rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+
 }
 
 .navbar {
@@ -63,6 +64,18 @@ span {
     color: orange;
 }
 
+.badge {
+    position: absolute;
+    top: 120px;
+    left: 12%;
+    background: var(--primary);
+    color: black;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+
 section {
     width: 100%;
     padding: 60px 12%;
@@ -105,7 +118,7 @@ section {
 }
 
 .content h1 span {
-    color: rgb(231, 163, 35);
+    color: orange;
     text-shadow: 0 0 10px rgb(136, 98, 29);
 }
 
