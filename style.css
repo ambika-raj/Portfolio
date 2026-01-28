@@ -489,6 +489,7 @@ section {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin-bottom: 30px;
 }
 
 .contact-form input,
@@ -523,4 +524,3 @@ section {
 .contact-form button:active {
     transform: scale(0.97);
 }
-
