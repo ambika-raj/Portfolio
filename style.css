@@ -1,3 +1,9 @@
+:root {
+    --primary: orange;
+    --dark: black;
+    --light: white;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -96,5 +102,254 @@ section {
 }
 
 .content h1 {
-    font-size: 30px;
+    font-size: 50px;
+}
+
+.content h1 span {
+    color: rgb(231, 163, 35);
+    text-shadow: 0 0 10px rgb(136, 98, 29);
+}
+
+.badge {
+    position: absolute;
+    top: 120px;
+    left: 12%;
+    background: var(--primary);
+    color: black;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.typewriter {
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.typewriter span {
+    color:rgb(109, 67, 0);
+    font-size: 2.5rem;
+    text-shadow: 0 0 5px rgb(109, 67, 0);
+    position: relative;
+    transition: 0.3s ease-out;
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.typewriter span::before {
+    content: "Student Developer";
+    animation: words 15s ease-out infinite;
+}
+
+.typewriter span::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -5px;
+    height: 100%;
+    /* border-left: 3px solid black; */
+    animation: cursor 0.6s steps(1) ease-out infinite;
+}
+
+/* @keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+} */
+
+@keyframes words {
+    0%, 33%{
+        content: "Student Developer"
+    }
+    34%, 66%{
+        content: "Cloud Student"
+    }
+    67%, 100% {
+        content: "Learning Professional"
+    }
+}
+
+.content p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+/* .social-links {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    border: 0.2rem solid black;
+    border-radius: 50%;
+    color: white;
+    margin: 5px 10px;
+    font-size: 1.5rem;
+    transition: 0.2s linear;
+}
+
+.social-links:hover {
+    color: black;
+    background-color: white;
+    scale: 1.3;
+    filter: drop-shadow(0 0 10px white);
+} */
+.footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px 12%;
+    margin-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-content p {
+    color: white;
+    font-size: 0.9rem;
+}
+
+.footer-social a {
+    margin-left: 20px;
+    color: white;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: orange;
+    text-shadow: 0 0 10px orange;
+}
+
+.content button {
+    width: 40%;
+    height: 6vh;
+    margin: 30px;
+    background-color: orange;
+    color: black;
+    border: none;
+    outline: none;
+    font-size: 100%;
+    border-radius: 5px;
+    transition: 0.2s linear;
+}
+
+.content button:hover {
+    scale: 1.1;
+    color: white;
+    border: 2px solid black;
+    background-color: transparent;
+    font-weight: 700;
+    box-shadow: 0 0 40px slategray;
+}
+
+@media (max-width: 884px) {
+
+    body {
+        overflow-y: auto;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links a {
+        margin: 10px 0;
+        font-size: 18px;
+    }
+
+    .main-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-container .content {
+        width: 90%;
+    }
+
+    .main-container .round-media {
+        width: 300px;
+        height: 300px;
+        margin-bottom: 20px;
+    }
+}
+
+/* CSS About */
+.about-section {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 0 12%;
+}
+
+.about-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.about-text {
+    width: 50%;
+}
+
+.about-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.about-skills {
+    width: 40%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    background: orange;
+    color: black;
+}
+
+@media (max-width: 884px) {
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-text,
+    .about-skills {
+        width: 100%;
+    }
 }
