@@ -16,6 +16,11 @@ It is designed to be simple, responsive, and easy to understand, using only HTML
 
 ## Screenshots
 
+- Pull Request 1: Screenshots/PR1.png
+- Pull Request 2: Screenshots/PR2.png
+- Pull Request 3: Screenshots/PR3.png
+- Pull Request 4: Screenshots/PR4.png
+
 
 
 ## Live Link
